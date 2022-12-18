@@ -26,7 +26,7 @@ $SplitCommand = $Command -split " "
                         
                     }
                 }
-                until()
+                until($something)
             }
             default {Write-Error "Error"}
         }
