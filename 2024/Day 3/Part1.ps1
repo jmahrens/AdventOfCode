@@ -1,11 +1,11 @@
 $Content = Get-Content .\Input.txt
 
 $Expression1 = "mul\(([0-9]|[0-9][0-9]|[0-9][0-9][0-9]),([0-9]|[0-9][0-9]|[0-9][0-9][0-9])\)"
-$matches = [regex]::Matches($content, $Expression1)
+$values = [regex]::Matches($content, $Expression1)
 
 $result = @()
-foreach ($match in $matches) {
-    $result += "{0},{1}" -f $match.Groups[1].Value, $match.Groups[2].Value
+foreach ($value in $values) {
+    $result += "{0},{1}" -f $value.Groups[1].Value, $value.Groups[2].Value
 }
 
 $sum = 0
